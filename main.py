@@ -41,12 +41,9 @@ def extract_svos(data):
                 "turn_id": turn["turn_id"],
                 "utterance": turn["utterance"],
                 "esvo": esvo_extraction,
-                "nltksvo": nsvo_extraction
+                "nsvo": nsvo_extraction
             })
-            # print(f"{turn['turn_id']}:\n\t{turn['utterance']}\n\t{esvo_extraction}\n\t{nsvo_extraction}")
     return svos
-
-
 
 if __name__ == '__main__':
     files = get_all_data_files()
@@ -58,10 +55,6 @@ if __name__ == '__main__':
 
         svo_data = extract_svos(data)
         
-
-
-
-        # print(data[0]["dialogue_id"])
-        # svo_datafile = open(f"{f[0]}/svo_{f[1]}", encoding='utf8', mode='2')
-        # svo_datafile.write(json.dumps(svo_data))
-        # svo_datafile.close()
+        svo_datafile = open(f"{f[0]}/svo_{f[1]}", encoding='utf8', mode='2')
+        svo_datafile.write(json.dumps(svo_data))
+        svo_datafile.close()
