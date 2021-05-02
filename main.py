@@ -55,6 +55,6 @@ if __name__ == '__main__':
 
         svo_data = extract_svos(data)
         
-        svo_datafile = open(f"{f[0]}/svo_{f[1]}", encoding='utf8', mode='2')
+        svo_datafile = open(f"{f[0]}/svo_{f[1]}", encoding='utf8', mode='w')
         svo_datafile.write(json.dumps(svo_data))
         svo_datafile.close()
