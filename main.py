@@ -36,13 +36,15 @@ def extract_svos(data):
                 root_tree = nltksvo.get_parse_tree(s)
                 nsvo_extraction.append(nltksvo.process_parse_tree(next(root_tree)))
 
-            svo["turns"].append({
+            turn = {
                 "speaker": turn["speaker"],
                 "turn_id": turn["turn_id"],
                 "utterance": turn["utterance"],
                 "esvo": esvo_extraction,
                 "nsvo": nsvo_extraction
-            })
+            }
+            svo["turns"].append(turn)
+            print(turn)
     return svos
 
 if __name__ == '__main__':
