@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/leoni/anaconda3/envs/svo/bin python
 from enhanced_subject_verb_object_extract import findSVOs, nlp
 from nltk_subject_verb_object_extraction import SVO
 

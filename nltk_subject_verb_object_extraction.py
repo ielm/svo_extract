@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/leoni/anaconda3/envs/svo/bin python
 import nltk
 from nltk.tree import *
 from nltk.parse import stanford
