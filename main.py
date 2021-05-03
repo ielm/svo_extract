@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from enhanced_subject_verb_object_extract import findSVOs, nlp
 from nltk_subject_verb_object_extraction import SVO
 
@@ -13,7 +14,7 @@ def get_all_data_files(base_dir='data'):
     return data_files
 
 def extract_svos(data):
-    svos = {}
+    svos = []
 
     nltksvo = SVO()
 
