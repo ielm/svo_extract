@@ -45,6 +45,7 @@ def extract_svos(data):
             }
             svo["turns"].append(turn)
             print(turn)
+        svos.append(svo)
     return svos
 
 if __name__ == '__main__':
